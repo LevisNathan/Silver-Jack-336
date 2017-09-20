@@ -73,6 +73,7 @@
         }
         
         // Return a specific number of cards
+    
         function generateHand($deck) {
             $hand = array(); 
             
@@ -99,6 +100,16 @@
             "profilePicUrl" => "./profile_pics/pic.png", 
             "cards" => generateHand($deck)
             ); 
+        $person2 = array(
+            "name" => "image2", 
+            "profilePicUrl" => "./profile_pics/Nathan_Levis.JPG", 
+            "cards" => generateHand($deck)
+            );  
+        $person3 = array(
+            "name" => "image3", 
+            "profilePicUrl" => "./profile_pics/Ana.png", 
+            "cards" => generateHand($deck)
+            );  
                 
             
             
@@ -133,7 +144,8 @@
             }
             
             displayPerson($person); 
-            
+            displayPerson($person2);
+            displayPerson($person3);
             ?>
         </body>
     <footer>
