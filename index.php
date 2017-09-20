@@ -75,6 +75,7 @@
         // Return a specific number of cards
     
         function generateHand($deck) {
+            shuffle($deck);
             $hand = array(); 
             
             for ($i = 0; $i < 3; $i++) {
