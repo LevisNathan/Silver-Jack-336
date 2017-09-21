@@ -1,8 +1,8 @@
-<? php
+<?php
   function generateDeck(){
             $cards = array();
             for($i=0;$i<52;$i++){
-                array.push($cards,$i);
+                array_push($cards,$i);
             }
             shuffle($cards);
         }
@@ -43,8 +43,7 @@
         $person = array(
             "name" => "Nathan", 
             "profilePicUrl" => "./profile_pics/Nathan_Levis.png", 
-            "cards" => generateHand($deck);
-            ); 
+            "cards" => generateHand($deck)); 
             
         function displayPerson($person) {
             // show profile pic
