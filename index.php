@@ -139,6 +139,11 @@
         
             }
             
+            //variables for way to get everyones points
+            $points1 = 0;
+            $points2=0;
+            $points3=0;
+            $temp_points=0;
             
             function calculateHandValue($cards, $i) {
               $sum = 0;
@@ -150,14 +155,43 @@
                 
                 echo "Total:", $sum + $name;
                 
-                
+                global $temp_points;
+                $temp_points = $sum;
 
             }
             
-            displayPerson($person, DREW); 
-            displayPerson($person2, NATHAN);
-            displayPerson($person3, ANA);
+            //function to display winner
+            //must pass in each person's points and array
+            function displayWinner($total1, $total2, $total3, $person, $person2, $person3)
+            {
+                echo "Winner: ";
+                
+                if($total1 > $total2 && $total1 > $total3)
+                {
+                    echo "<img src='".$person["profilePicUrl"]."'>";
+                }
+                else if ($total2 > $total1 && $total2 > $total3)
+                {
+                    echo "<img src='".$person2["profilePicUrl"]."'>";
+                }
+                else if($total3 > $total1 && $total3 > $total2)
+                {
+                    echo "<img src='".$person3["profilePicUrl"]."'>";
+                }
+                else {
+                    echo "More than one winner";
+                }
+                
+            }
             
+            displayPerson($person, DREW); 
+            $points1=$temp_points;
+            displayPerson($person2, NATHAN);
+            $points2=$temp_points;
+            displayPerson($person3, ANA);
+            $points3=$temp_points;
+            
+            displayWinner($points1, $points2, $points3, $person, $person2, $person3);
             
             
             ?>

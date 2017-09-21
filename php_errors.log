@@ -1,0 +1,30 @@
+[19-Sep-2017 22:47:53 UTC] PHP Warning:  array_pop() expects parameter 1 to be array, null given in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 38
+[19-Sep-2017 22:47:53 UTC] PHP Stack trace:
+[19-Sep-2017 22:47:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:47:53 UTC] PHP   2. generateHand() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:46
+[19-Sep-2017 22:47:53 UTC] PHP   3. array_pop() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:38
+[19-Sep-2017 22:47:53 UTC] PHP Warning:  array_pop() expects parameter 1 to be array, null given in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 38
+[19-Sep-2017 22:47:53 UTC] PHP Stack trace:
+[19-Sep-2017 22:47:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:47:53 UTC] PHP   2. generateHand() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:46
+[19-Sep-2017 22:47:53 UTC] PHP   3. array_pop() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:38
+[19-Sep-2017 22:47:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 69
+[19-Sep-2017 22:47:53 UTC] PHP Stack trace:
+[19-Sep-2017 22:47:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:47:53 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:77
+[19-Sep-2017 22:47:53 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:62
+[19-Sep-2017 22:51:26 UTC] PHP Warning:  array_pop() expects parameter 1 to be array, null given in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 38
+[19-Sep-2017 22:51:26 UTC] PHP Stack trace:
+[19-Sep-2017 22:51:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:51:26 UTC] PHP   2. generateHand() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:47
+[19-Sep-2017 22:51:26 UTC] PHP   3. array_pop() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:38
+[19-Sep-2017 22:51:26 UTC] PHP Warning:  array_pop() expects parameter 1 to be array, null given in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 38
+[19-Sep-2017 22:51:26 UTC] PHP Stack trace:
+[19-Sep-2017 22:51:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:51:26 UTC] PHP   2. generateHand() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:47
+[19-Sep-2017 22:51:26 UTC] PHP   3. array_pop() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:38
+[19-Sep-2017 22:51:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php on line 70
+[19-Sep-2017 22:51:26 UTC] PHP Stack trace:
+[19-Sep-2017 22:51:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:0
+[19-Sep-2017 22:51:26 UTC] PHP   2. displayPerson() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:78
+[19-Sep-2017 22:51:26 UTC] PHP   3. calculateHandValue() /home/ubuntu/workspace/github/Silver-Jack-336/inc/functions.php:63
