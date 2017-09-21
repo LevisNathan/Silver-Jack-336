@@ -4,15 +4,17 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <meta charset="utf-8" />
         <title>
-            
+           Silver Jack  
         </title>
-    </head>  
+    </head> 
+    
         <body>
-            <header>
-                <h1></h1>
-            </header>
+          <header>
+        <h1 id="tittle"> Silver Jack </h1> 
+         </header>  
+         <h2>
             <?php
-             
+            
                // Generate a deck of cards 
         // [0, 1, 2, ..., 51]
         // map each number to a card 
@@ -114,8 +116,10 @@
                 
             
             
-            function displayPerson($person) {
+            function displayPerson($person, $name) {
                 // show profile pic
+                
+                echo  $name,  "<br/>";
                 echo "<img src='".$person["profilePicUrl"]."'>"; 
                 
                 
@@ -130,24 +134,34 @@
                     echo "<img src='".$card["imgURL"]."'>"; 
                 }
                 
-                echo calculateHandValue($person["cards"]); 
+                echo calculateHandValue($person["cards"],$i), "<br/> <br/> <br/> "; 
+                
+        
             }
             
             
-            function calculateHandValue($cards) {
-                $sum = 0; 
+            function calculateHandValue($cards, $i) {
+              $sum = 0;
                 
                 foreach ($cards as $card) {
-                    $sum += $card["num"]; 
+                    $sum  += $card["num"]; 
                 }
                 
-                return $sum; 
+                
+                echo "Total:", $sum + $name;
+                
+                
+
             }
             
-            displayPerson($person); 
-            displayPerson($person2);
-            displayPerson($person3);
+            displayPerson($person, DREW); 
+            displayPerson($person2, NATHAN);
+            displayPerson($person3, ANA);
+            
+            
+            
             ?>
+            </h2>
         </body>
     <footer>
         

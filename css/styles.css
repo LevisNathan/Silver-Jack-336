@@ -1,0 +1,22 @@
+body{
+    background-image:url("../pictures/background.jpg");
+    color: white;
+}
+
+h2{
+    position:absolute;
+    top: 20%;
+    left: 32%;
+    border: 15px solid black;
+    padding: 10px;
+}
+#tittle {
+text-align: center;
+font-family: "Times New Roman", Georgia, Serif;
+font-size:5em;
+
+}
+
+
+
+
