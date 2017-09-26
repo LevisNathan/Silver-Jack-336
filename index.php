@@ -113,88 +113,99 @@
             "profilePicUrl" => "./profile_pics/Ana.png", 
             "cards" => generateHand($deck)
             );  
-                
+        $person4 = array(
+            "name" => "image4", 
+            "profilePicUrl" => "./profile_pics/Harley.jpg", 
+            "cards" => generateHand($deck)
+            );  
+                 
             
             
-            function displayPerson($person, $name) {
-                // show profile pic
+        function displayPerson($person, $name) {
+            // show profile pic
+            
+            echo  $name,  "<br/>";
+            echo "<img src='".$person["profilePicUrl"]."'>"; 
+            
+            
+            // iterate through $person's "cards"
+            
+            for($i = 0; $i < count($person["cards"]); $i++) {
+                $card = $person["cards"][$i];
                 
-                echo  $name,  "<br/>";
-                echo "<img src='".$person["profilePicUrl"]."'>"; 
+                // construct the imgURL for each card
                 
-                
-                // iterate through $person's "cards"
-                
-                for($i = 0; $i < count($person["cards"]); $i++) {
-                    $card = $person["cards"][$i];
-                    
-                    // construct the imgURL for each card
-                    
-                    // translate this to HTML 
-                    echo "<img src='".$card["imgURL"]."'>"; 
-                }
-                
-                echo calculateHandValue($person["cards"],$i), "<br/> <br/> <br/> "; 
+                // translate this to HTML 
+                echo "<img src='".$card["imgURL"]."'>"; 
+            }
+            
+            echo calculateHandValue($person["cards"],$i), "<br/> <br/> <br/> "; 
                 
         
             }
             
-            //variables for way to get everyones points
-            $points1 = 0;
-            $points2=0;
-            $points3=0;
-            $temp_points=0;
+        //variables for way to get everyones points
+        $points1 = 0;
+        $points2=0;
+        $points3=0;
+        $points4=0;
+        $temp_points=0;
+        
+        function calculateHandValue($cards, $i) {
+          $sum = 0;
             
-            function calculateHandValue($cards, $i) {
-              $sum = 0;
-                
-                foreach ($cards as $card) {
-                    $sum  += $card["num"]; 
-                }
-                
-                
-                echo "Total:", $sum + $name;
-                
-                global $temp_points;
-                $temp_points = $sum;
+            foreach ($cards as $card) {
+                $sum  += $card["num"]; 
+            }
+            
+            
+            echo "Total:", $sum + $name;
+            
+            global $temp_points;
+            $temp_points = $sum;
 
-            }
+        }
+        
+        //function to display winner
+        //must pass in each person's points and array
+        function displayWinner($total1, $total2, $total3, $total4, $person, $person2, $person3, $person4)
+        {
+            echo "Winner: ";
             
-            //function to display winner
-            //must pass in each person's points and array
-            function displayWinner($total1, $total2, $total3, $person, $person2, $person3)
+            if($total1 > $total2 && $total1 > $total3 && $total1 > $total4)
             {
-                echo "Winner: ";
-                
-                if($total1 > $total2 && $total1 > $total3)
-                {
-                    echo "<img src='".$person["profilePicUrl"]."'>";
-                }
-                else if ($total2 > $total1 && $total2 > $total3)
-                {
-                    echo "<img src='".$person2["profilePicUrl"]."'>";
-                }
-                else if($total3 > $total1 && $total3 > $total2)
-                {
-                    echo "<img src='".$person3["profilePicUrl"]."'>";
-                }
-                else {
-                    echo "More than one winner";
-                }
-                
+                echo "<img src='".$person["profilePicUrl"]."'>";
+            }
+            else if ($total2 > $total1 && $total2 > $total3 && $total2 > $total4)
+            {
+                echo "<img src='".$person2["profilePicUrl"]."'>";
+            }
+            else if($total3 > $total1 && $total3 > $total2 && $total3 > $total4)
+            {
+                echo "<img src='".$person3["profilePicUrl"]."'>";
+            }
+            else if($total4 > $total1 && $total4 > $total2 && $total4 > $total3)
+            {
+                echo "<img src='".$person4["profilePicUrl"]."'>";
+            }
+            else {
+                echo "More than one winner";
             }
             
-            displayPerson($person, DREW); 
-            $points1=$temp_points;
-            displayPerson($person2, NATHAN);
-            $points2=$temp_points;
-            displayPerson($person3, ANA);
-            $points3=$temp_points;
-            
-            displayWinner($points1, $points2, $points3, $person, $person2, $person3);
-            
-            
-            ?>
+        }
+        
+        displayPerson($person, DREW); 
+        $points1=$temp_points;
+        displayPerson($person2, NATHAN);
+        $points2=$temp_points;
+        displayPerson($person3, ANA);
+        $points3=$temp_points;
+        displayPerson($person4, HARLEY);
+        $points4=$temp_points;
+        displayWinner($points1, $points2, $points3, $points4, $person, $person2, $person3, $person4);
+        
+        
+        ?>
             </h2>
         </body>
     <footer>
